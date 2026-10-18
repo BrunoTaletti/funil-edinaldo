@@ -1,0 +1,677 @@
+<!doctype html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#1645ee">
+  <meta name="description"
+    content="Um plano para transformar a experiência de Edinaldo em logística em autoridade, receita e patrimônio. Simulador interativo de um negócio de conhecimento.">
+  <title>Edinaldo — Patrimônio de Verdade</title>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="mobile.css">
+  <link rel="stylesheet" href="brand.css">
+  <link rel="stylesheet" href="experience.css">
+  <script src="model.js" defer></script>
+  <script src="app.js" defer></script>
+  <script src="mobile.js" defer></script>
+  <script src="roadmap.js" defer></script>
+</head>
+
+<body>
+  <header class="topbar">
+    <a class="brand logo-brand" href="#inicio" aria-label="Edinaldo — Logística de Elite, início"><img
+        src="brand/edinaldo-preto-transparente.svg" width="180" height="36" alt="Edinaldo — Logística de Elite"></a>
+    <nav aria-label="Navegação principal"><a href="#funil">O modelo</a><a href="#patrimonio">O próximo nível</a><a
+        href="#projecoes">Projeções</a><a href="#comecar">Como começar</a></nav>
+    <button class="button button-outline export-button" type="button"><svg width="16" height="16" viewBox="0 0 24 24"
+        fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true">
+        <path d="M12 3v12m-4-4 4 4 4-4M4 15v5h16v-5" />
+      </svg> Exportar PDF</button>
+  </header>
+
+  <main id="inicio">
+    <section class="hero wrap">
+      <div class="hero-copy">
+        <p class="eyebrow"><span class="blue-dot"></span> UM PLANO PARA O SEU PRÓXIMO CAPÍTULO</p>
+        <h1>Sua experiência.<br>Um negócio.<br><span>Um novo legado.</span></h1>
+        <p class="hero-description">O que você sabe sobre logística pode ir muito além de uma operação. Pode formar
+          profissionais, transformar empresas e construir o seu patrimônio.</p><a class="text-link"
+          href="#simulador">Explore o potencial da sua ideia </a>
+      </div>
+      <div class="hero-art"
+        aria-label="Da experiência à autoridade, da autoridade à receita e da receita ao patrimônio">
+        <div class="art-top"><span>VISÃO DE NEGÓCIO / 01</span></div>
+        <div class="orbit orbit-one"></div>
+        <div class="orbit orbit-two"></div>
+        <div class="art-stack stack-one"><span>01 / COMPARTILHAR</span><strong>Experiência</strong><span
+            class="stack-arrow">↓</span></div>
+        <div class="art-stack stack-two"><span>02 / TRANSFORMAR</span><strong>Autoridade</strong><span
+            class="stack-arrow">↓</span></div>
+        <div class="art-stack stack-three"><span>03 / MULTIPLICAR</span><strong>Patrimônio <span
+              aria-hidden="true">↓</span></strong></div>
+      </div>
+    </section>
+
+    <section class="simulator wrap" id="simulador" aria-labelledby="simulator-title">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">01 / DEFINA O PONTO DE PARTIDA</p>
+          <h2 id="simulator-title">Simule seu cenário</h2>
+        </div>
+        <p>Comece pelas visualizações mensais do canal e veja como elas podem gerar comunidade, vendas e patrimônio.</p>
+      </div>
+      <form id="simulator-form" novalidate>
+        <div class="control-panel">
+          <div class="control-intro"><span class="live-label"><span class="blue-dot"></span> SEU PONTO DE PARTIDA</span>
+            <p>Ajuste os números.<br>O plano inteiro acompanha.</p><button id="reset-button" class="reset-button"
+              type="button">↺ Restaurar cenário inicial</button>
+          </div>
+          <div class="control-field"><label for="visitors">Visualizações do canal / mês</label>
+            <div class="input-shell"><input id="visitors" name="visitors" type="number" value="5000" min="0"
+                max="1000000" step="1" inputmode="numeric"><span>no mês</span></div><small>Total do mês no YouTube
+              Studio.</small>
+          </div>
+          <div class="control-field"><label for="communityRate">Adesão à comunidade</label>
+            <div class="input-shell"><input id="communityRate" name="communityRate" type="number" value="1" min="0"
+                max="10" step="0.1" inputmode="decimal"><span>%</span></div><small>Adesões por visualização.</small>
+          </div>
+          <div class="control-field"><label for="midRate">Comunidade → produtos</label>
+            <div class="input-shell"><input id="midRate" name="midRate" type="number" value="3" min="0" max="20"
+                step="0.1" inputmode="decimal"><span>% / mês</span></div><small>Dos membros ativos.</small>
+          </div>
+          <div class="control-field"><label for="consultRate">Produtos → consultoria</label>
+            <div class="input-shell"><input id="consultRate" name="consultRate" type="number" value="5" min="0" max="20"
+                step="0.1" inputmode="decimal"><span>%</span></div><small>Dos compradores de produtos.</small>
+          </div>
+        </div>
+        <details class="advanced-controls">
+          <summary><span>Personalizar preços, operação e patrimônio</span><span class="details-symbol"
+              aria-hidden="true">+</span></summary>
+          <div class="advanced-grid">
+            <fieldset>
+              <legend>Produtos & aquisição</legend>
+              <label for="communityPrice">Comunidade · mensalidade (R$)<input id="communityPrice" name="communityPrice"
+                  type="number" min="10" max="500" step="0.1" value="49.9"></label>
+              <label for="midPrice">Preço médio de cursos e mentorias (R$)<input id="midPrice" name="midPrice"
+                  type="number" min="993" max="10000" step="1" value="1497"></label>
+              <label for="consultPrice">Contrato de consultoria (R$)<input id="consultPrice" name="consultPrice"
+                  type="number" min="15000" max="100000" step="100" value="20000"></label>
+              <label for="directRate">Vendas diretas por visualização (%)<input id="directRate" name="directRate"
+                  type="number" min="0" max="2" step="0.01" value="0.1"></label>
+            </fieldset>
+            <fieldset>
+              <legend>Operação & capacidade</legend>
+              <label for="churn">Cancelamentos da comunidade / mês (%)<input id="churn" name="churn" type="number"
+                  min="0" max="100" step="0.1" value="8"></label>
+              <label for="costRate">Reserva para impostos e operação (%)<input id="costRate" name="costRate"
+                  type="number" min="0" max="100" step="1" value="30"></label>
+              <label for="midCapacity">Vagas em produtos / mês<input id="midCapacity" name="midCapacity" type="number"
+                  min="0" max="200" step="1" value="20"></label>
+              <label for="consultCapacity">Novos contratos de consultoria / mês<input id="consultCapacity"
+                  name="consultCapacity" type="number" min="0" max="5" step="1" value="1"></label>
+            </fieldset>
+            <fieldset>
+              <legend>Distribuição & futuro</legend>
+              <label for="investmentShare">Carteira de investimentos (%)<input id="investmentShare"
+                  name="investmentShare" type="number" min="0" max="100" step="1" value="40"></label>
+              <label for="acquisitionShare">Aquisição de empresas (%)<input id="acquisitionShare"
+                  name="acquisitionShare" type="number" min="0" max="100" step="1" value="30"></label>
+              <div class="calculated-input"><span>MyHub · percentual restante</span><strong
+                  data-output="myhubShare">30%</strong></div>
+              <label for="annualReturn">Retorno anual hipotético da carteira (%)<input id="annualReturn"
+                  name="annualReturn" type="number" min="0" max="15" step="0.1" value="8"></label>
+              <label for="incomeGoal">Meta de renda mensal da carteira (R$)<input id="incomeGoal" name="incomeGoal"
+                  type="number" min="100" max="100000" step="100" value="3000"></label>
+            </fieldset>
+          </div>
+        </details>
+        <p id="input-feedback" class="input-feedback" role="status" aria-live="polite"></p>
+      </form>
+      <aside class="mobile-simulation-result" aria-label="Prévia do cenário simulado">
+        <p class="eyebrow">SEU CENÁRIO, EM TEMPO REAL</p>
+        <div class="mobile-result-grid">
+          <div><span>Saldo médio para distribuir / mês</span><strong data-output="averageNet">—</strong></div>
+          <div><span>Faturamento bruto em 12 meses</span><strong data-output="yearGross">—</strong></div>
+        </div>
+        <a href="#projecoes">Ver as projeções completas </a>
+      </aside>
+    </section>
+
+    <section class="funnel-section wrap" id="funil" aria-labelledby="funnel-title">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">02 / A ARQUITETURA DO NEGÓCIO</p>
+          <h2 id="funnel-title">Como o funil gera receita</h2>
+        </div>
+      </div>
+      <div class="funnel-legend"><span>JORNADA DO CLIENTE</span><span>OFERTA & PROJEÇÃO DO 1º MÊS</span></div>
+      <article class="funnel-row">
+        <div class="funnel-visual">
+          <div class="funnel-shape funnel-top"><span class="stage-tag">TOPO</span><span class="stage-icon"
+              aria-hidden="true">▶</span>
+            <h3>Atraia. Conecte.</h3>
+            <p>YouTube + comunidade</p>
+            <div class="shape-bottom"><span data-output="visitors">5.000</span> visualizações / mês</div>
+          </div><span class="funnel-connector" aria-hidden="true">↓</span>
+        </div>
+        <div class="stage-content">
+          <div class="stage-title">
+            <h3>A sua experiência é o começo.</h3><span class="pill">RECORRÊNCIA</span>
+          </div>
+          <p>Vídeos práticos sobre operação, liderança e eficiência em logística. O próximo passo é uma comunidade
+            fechada no WhatsApp, com troca direta, encontros e conteúdo que resolve problemas reais.</p>
+          <div class="offer-line"><span>Comunidade fechada</span><strong><span data-output="communityPrice">R$
+                49,90</span><small> / mês</small></strong></div>
+          <div class="stage-metrics">
+            <div><span>Novos membros / mês</span><strong data-output="newMembers">50</strong></div>
+            <div><span>Receita no 1º mês</span><strong data-output="communityRevenue">R$ 2.495</strong></div>
+            <div><span>Plano trimestral sugerido</span><strong data-output="quarterPrice">R$ 149,70</strong></div>
+          </div>
+        </div>
+      </article>
+      <article class="funnel-row">
+        <div class="funnel-visual">
+          <div class="funnel-shape funnel-middle"><span class="stage-tag">MEIO</span><svg class="stage-icon stage-book"
+              viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+              <path
+                d="M16 8C12 5 7 5 3 6v19c4-1 9-1 13 2 4-3 9-3 13-2V6c-4-1-9-1-13 2Zm0 0v19M7 11h5m-5 5h5m8-5h5m-5 5h5" />
+            </svg>
+            <h3>Ensine. Desenvolva.</h3>
+            <p>Conhecimento aplicado</p>
+            <div class="shape-bottom"><span data-output="midBuyers">5</span> vendas no 1º mês</div>
+          </div><span class="funnel-connector" aria-hidden="true">↓</span>
+        </div>
+        <div class="stage-content">
+          <div class="stage-title">
+            <h3>Transforme repertório em resultado.</h3><span class="pill">ESCALA & AUTORIDADE</span>
+          </div>
+          <p>Cursos, mentorias, imersões e palestras para profissionais da área. Da primeira liderança à gestão de uma
+            operação: cada produto resolve um problema específico.</p>
+          <div class="offer-line"><span>Portfólio de conhecimento</span><strong>R$ 993 <small>a</small> R$ 10
+              mil</strong></div>
+          <div class="stage-metrics">
+            <div><span>Da comunidade</span><strong><span data-output="communityBuyers">1</span>
+                <small>venda(s)</small></strong></div>
+            <div><span>Direto do YouTube</span><strong><span data-output="directBuyers">4</span>
+                <small>venda(s)</small></strong></div>
+            <div><span>Receita no 1º mês</span><strong data-output="midRevenue">R$ 7.485</strong></div>
+          </div>
+        </div>
+      </article>
+      <article class="funnel-row">
+        <div class="funnel-visual">
+          <div class="funnel-shape funnel-bottom"><span class="stage-tag">FUNDO</span><span class="stage-icon"
+              aria-hidden="true">⌘</span>
+            <h3>Aplique. Transforme.</h3>
+            <p>Dentro das empresas</p>
+            <div class="shape-bottom"><span data-output="consultYearCount">—</span> contratos no ano</div>
+          </div>
+        </div>
+        <div class="stage-content">
+          <div class="stage-title">
+            <h3>Logística de elite, na prática.</h3><span class="pill">ALTO VALOR</span>
+          </div>
+          <p>Atuação direta nas empresas: diagnóstico, melhoria de processos, treinamento da equipe e acompanhamento das
+            implementações. A sua experiência lado a lado com quem executa.</p>
+          <div class="offer-line"><span>Consultoria empresarial</span><strong>R$ 15 mil <small>a</small> R$ 30
+              mil+</strong></div>
+          <div class="stage-metrics">
+            <div><span>Preço por contrato</span><strong data-output="consultPrice">R$ 20.000</strong></div>
+            <div><span>Contratos no 1º mês</span><strong data-output="consultCount">0</strong></div>
+            <div><span>Receita no 1º mês</span><strong data-output="consultRevenue">R$ 0</strong></div>
+          </div>
+        </div>
+      </article>
+
+      <article class="funnel-distribution" aria-labelledby="distribution-title">
+        <div class="distribution-head"><span class="stage-tag">DESTINAR</span>
+          <h3 id="distribution-title">O resultado continua o caminho.</h3>
+          <p>Receita recebida. Operação sustentada. Agora, cada parte do saldo tem um destino.</p>
+        </div>
+        <div class="distribution-source">
+          <div><span>Receita média / mês</span><strong data-output="averageGross">—</strong></div><span
+            aria-hidden="true">−</span>
+          <div><span>Reserva operacional</span><strong data-output="averageCosts">—</strong></div><span
+            aria-hidden="true">=</span>
+          <div><span>Saldo para distribuir</span><strong data-output="averageNet">—</strong></div>
+        </div>
+        <div class="distribution-branches"><a href="#patrimonio"><span>Carteira de investimentos</span><b
+              data-output="investmentShare">40%</b><strong data-output="investmentMonthly">—</strong></a><a
+            href="#patrimonio"><span>Aquisição de empresas</span><b data-output="acquisitionShare">30%</b><strong
+              data-output="acquisitionMonthly">—</strong></a><a href="#patrimonio"><span>Fundo MyHub</span><b
+              data-output="myhubShare">30%</b><strong data-output="myhubMonthly">—</strong></a></div>
+      </article>
+    </section>
+
+    <section class="wealth-section" id="patrimonio" aria-labelledby="wealth-title">
+      <div class="wrap">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">03 / DÊ UM DESTINO AO RESULTADO</p>
+            <h2 id="wealth-title">Destino do resultado</h2>
+          </div>
+          <p>Abaixo, veja em detalhes como o saldo se distribui entre investimentos, aquisição de empresas e MyHub.</p>
+        </div>
+        <div class="cash-flow">
+          <div><span>FATURAMENTO MÉDIO / MÊS</span><strong data-output="averageGross">—</strong></div><span
+            class="cash-operator" aria-hidden="true">−</span>
+          <div><span>RESERVA DE CUSTOS · <b data-output="costRate">30%</b></span><strong
+              data-output="averageCosts">—</strong></div><span class="cash-operator" aria-hidden="true">=</span>
+          <div class="available-cash"><span>SALDO MÉDIO A DISTRIBUIR / MÊS</span><strong
+              data-output="averageNet">—</strong></div>
+        </div>
+
+        <div class="allocation-bar" aria-hidden="true"><span id="bar-investment"></span><span
+            id="bar-acquisition"></span><span id="bar-myhub"></span></div>
+        <div class="wealth-grid">
+          <article class="wealth-card">
+            <div class="wealth-card-top"><span>01 / RENDA</span><strong data-output="investmentShare">40%</strong></div>
+            <h3>Carteira de investimentos</h3>
+            <p>Uma carteira de investimentos para acumular patrimônio e construir uma fonte adicional de renda.</p>
+            <div class="wealth-amount"><span>APORTE MÉDIO MENSAL</span><strong
+                data-output="investmentMonthly">—</strong></div>
+            <div class="wealth-card-bottom"><span>Carteira ao final de 12 meses</span><strong
+                data-output="portfolioYear">—</strong>
+              <div class="income-result"><span>Renda mensal potencial após o 12º mês</span><strong
+                  data-output="portfolioIncome">—</strong></div>
+            </div>
+          </article>
+          <article class="wealth-card">
+            <div class="wealth-card-top"><span>02 / AQUISIÇÕES</span><strong data-output="acquisitionShare">30%</strong>
+            </div>
+            <h3>Aquisição de empresas</h3>
+            <p>Forme uma reserva para adquirir pequenas empresas em que sua experiência possa melhorar os resultados.
+            </p>
+            <div class="wealth-amount"><span>RESERVA MÉDIA MENSAL</span><strong
+                data-output="acquisitionMonthly">—</strong></div>
+            <div class="wealth-card-bottom"><span>Reserva ao final de 12 meses</span><strong
+                data-output="acquisitionYear">—</strong></div>
+          </article>
+          <article class="wealth-card myhub-card">
+            <div class="wealth-card-top"><span>03 / CONSTRUÇÃO</span><strong data-output="myhubShare">30%</strong></div>
+            <h3>Fundo MyHub</h3>
+            <p>Reserve capital para validar a MyHub, executar os primeiros projetos e estruturar suas próprias empresas
+              de logística.</p>
+            <div class="wealth-amount"><span>RESERVA MÉDIA MENSAL</span><strong data-output="myhubMonthly">—</strong>
+            </div>
+            <div class="wealth-card-bottom"><span>Capital ao final de 12 meses</span><strong
+                data-output="myhubYear">—</strong></div>
+          </article>
+        </div>
+        <div class="income-goal"><span class="goal-icon" aria-hidden="true">◎</span>
+          <p>Para buscar <b data-output="incomeGoal">R$ 3.000</b> por mês com o retorno simulado, o patrimônio de
+            referência seria de <b data-output="requiredCapital">—</b>. Neste plano, a carteira chega a <b
+              data-output="goalProgress">—</b> desse valor no primeiro ano.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="forecast-section wrap" id="projecoes" aria-labelledby="forecast-title">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">04 / VEJA O HORIZONTE</p>
+          <h2 id="forecast-title">Projeções do negócio</h2>
+        </div>
+        <p>Compare o resultado acumulado em 1, 3, 6 e 12 meses.</p>
+      </div>
+      <div class="forecast-summary">
+        <div><span>RECEITA BRUTA EM 12 MESES</span><strong data-output="yearGross">—</strong></div>
+        <div><span>SALDO DISTRIBUÍDO EM 12 MESES</span><strong data-output="yearNet">—</strong></div>
+        <div><span>MEMBROS ATIVOS NO MÊS 12</span><strong data-output="yearMembers">—</strong></div>
+      </div>
+      <div class="mobile-period-picker" role="group" aria-label="Escolha o período das projeções"><button type="button"
+          data-months="1" aria-pressed="false">1 mês</button><button type="button" data-months="3"
+          aria-pressed="false">3 meses</button><button type="button" data-months="6" aria-pressed="false">6
+          meses</button><button type="button" data-months="12" aria-pressed="true">12 meses</button></div>
+      <p class="mobile-period-caption" id="mobile-period-caption" role="status" aria-live="polite">Valores acumulados em
+        12 meses.</p>
+      <div class="table-container" role="region" aria-label="Projeções acumuladas do funil" tabindex="0">
+        <table>
+          <caption class="sr-only">Projeções financeiras acumuladas em um, três, seis e doze meses</caption>
+          <thead>
+            <tr>
+              <th scope="col">DESTINO DO RESULTADO</th>
+              <th scope="col">Mensal<small>1 mês</small></th>
+              <th scope="col">Trimestral<small>3 meses</small></th>
+              <th scope="col">Semestral<small>6 meses</small></th>
+              <th scope="col">Anual<small>12 meses</small></th>
+            </tr>
+          </thead>
+          <tbody id="forecast-body"></tbody>
+        </table>
+      </div>
+
+      <details class="methodology">
+        <summary><span>Entenda os números</span><span class="details-symbol" aria-hidden="true">+</span></summary>
+        <div class="methodology-content">
+          <p><b>Visualizações e adesões.</b> O volume mensal de visualizações se repete ao longo da projeção. Novas
+            adesões = visualizações × taxa de adesão, arredondadas para baixo. Visualizações não representam pessoas
+            únicas; ajuste a taxa aos resultados observados no canal.</p>
+          <p><b>Comunidade e produtos.</b> Os cancelamentos incidem sobre os membros do mês anterior. Vendas da
+            comunidade usam a base ativa; vendas diretas usam o total de visualizações × sua taxa própria. As duas
+            origens respeitam o total de vagas, com prioridade para a comunidade. Não se trata de uma contagem de
+            compradores únicos entre canais.</p>
+          <p><b>Consultoria.</b> Cada comprador alimenta a demanda pela taxa configurada. Ela acumula até completar um
+            contrato inteiro, respeitando a capacidade mensal. A receita entra no mês da contratação, sem parcelamento
+            ou prazo de negociação.</p>
+          <p><b>Caixa e patrimônio.</b> Médias dos 12 meses simulados. A reserva cobre estimativas de impostos,
+            ferramentas, produção, entrega e remuneração. Ajuste-a à operação real; o saldo não é lucro contábil. O
+            modelo começa sem clientes ou capital. Sem anúncios, o custo de mídia é zero; produção e entrega entram na
+            reserva operacional.</p>
+          <p><b>Carteira e reservas.</b> Retorno mensal = (1 + taxa anual)<sup>1/12</sup> − 1. Aportes entram ao final
+            do mês. A renda potencial usa o saldo após 12 meses × retorno mensal. Retorno hipotético de <b
+              data-output="annualReturn">8%</b> a.a., com rendimentos reinvestidos. Antes de impostos e inflação; sem
+            garantia de retorno. Acúmulo de aportes. Sem retorno financeiro presumido. Acúmulo de aportes. Sem custos de
+            abertura presumidos.</p>
+          <p><b>Como ler a tabela.</b> A linha da carteira inclui rendimentos reinvestidos; as outras reservas somam
+            apenas aportes. Os períodos são acumulados, e não a receita de um mês isolado. Valores arredondados apenas
+            na exibição. O plano trimestral é uma alternativa comercial; a conta usa mensalidades. Os limites dos campos
+            são limites de edição, não taxas comprovadas.</p>
+          <p>Potencial por membro: <b data-output="annualMember">R$ 598,80</b> em 12 meses sem cancelamento. Com a
+            retenção simulada, o valor esperado em 12 meses é <b data-output="memberLtv">—</b>. A recorrência ajuda a
+            financiar os próximos produtos.</p>
+          <p>Preço médio simulado: <b data-output="midPrice">R$ 1.497</b>. Até <b data-output="midCapacity">20</b> vagas
+            por mês. Produtos diferentes permitem novas compras da base ao longo do ano.</p>
+          <p>A demanda se acumula até formar contratos inteiros. Limite de <b data-output="consultCapacity">1</b>
+            novo(s) contrato(s) por mês; dimensione esse limite ao tempo de cada projeto e à equipe disponível.</p>
+        </div>
+      </details>
+    </section>
+
+    <section class="next-section" id="comecar" aria-labelledby="next-title">
+      <div class="wrap">
+        <p class="eyebrow">05 / É AQUI QUE TUDO COMEÇA</p>
+        <div class="roadmap-heading">
+          <h2 id="next-title">Uma tarefa de cada vez.<br><span>Agora, coloque em prática.</span></h2>
+          <p>Construa audiência, abra a turma fundadora e conduza o primeiro desafio até uma oferta de R$ 993. Um plano
+            no papel só muda alguma coisa quando vira ação.</p>
+        </div>
+        <div class="roadmap-console">
+          <div class="roadmap-goal"><span class="eyebrow">SEU OBJETIVO</span>
+            <h3>Da primeira publicação à primeira oferta.</h3>
+            <p>Comece com 60 dias para dar os primeiros passos no canal. Depois, a comunidade e o desafio entram no
+              calendário.</p>
+          </div>
+          <form id="roadmap-dates" class="roadmap-dates"><label for="roadmap-start">Vou começar em<input type="date"
+                id="roadmap-start" name="start" required aria-describedby="roadmap-date-feedback"></label><label
+              for="roadmap-finish">Prazo para a primeira fase<input type="date" id="roadmap-finish" name="finish"
+                required aria-describedby="roadmap-date-feedback"></label><button class="button roadmap-date-button"
+              type="submit">Atualizar meu plano</button>
+            <p id="roadmap-date-feedback" role="status" aria-live="polite"></p>
+          </form>
+          <p class="roadmap-print-dates">Início: <span data-roadmap-date="start">—</span> · Primeira fase até <span
+              data-roadmap-date="finish">—</span></p>
+          <div class="roadmap-progress">
+            <div><label for="roadmap-progress">Seu avanço</label><strong id="roadmap-progress-label" role="status"
+                aria-live="polite">0 de 22 tarefas · 0%</strong></div><progress id="roadmap-progress" max="22"
+              value="0">0 de 22 tarefas</progress>
+            <p id="roadmap-next-action">Marque cada tarefa depois de concluí-la.</p>
+          </div>
+          <div class="roadmap-milestones">
+            <div><span>Abrir a turma</span><strong data-roadmap-date="opening">—</strong></div>
+            <div><span>Começar o desafio</span><strong data-roadmap-date="challengeStart">—</strong></div>
+            <div><span>Apresentar a oferta</span><strong data-roadmap-date="challengeEnd">—</strong></div>
+          </div>
+        </div>
+        <noscript>
+          <p>Ative o JavaScript para definir datas e salvar o progresso. Você pode usar as tarefas abaixo como roteiro.
+          </p>
+        </noscript>
+        <div class="roadmap-phases">
+          <article class="roadmap-phase" data-phase="presenca" aria-labelledby="phase-presenca">
+            <header>
+              <div>
+                <p class="eyebrow">01 / PRIMEIROS 60 DIAS</p>
+                <h3 id="phase-presenca">Construa presença.</h3>
+              </div><span class="phase-progress" data-phase-progress="presenca">0 / 8</span>
+            </header>
+            <p class="phase-description">Um vídeo longo e três curtos por semana. Reaproveite a mesma gravação: um
+              problema, uma explicação, um convite para assistir ao conteúdo completo.</p>
+            <ul class="roadmap-tasks">
+              <li><label class="roadmap-task"><input type="checkbox" data-task="publico"><span>Definir quem você quer
+                    ajudar e escolher três dores da logística.<time data-task-date="publico">Prazo a
+                      definir</time></span><span class="task-state" aria-hidden="true"></span></label></li>
+              <li><label class="roadmap-task"><input type="checkbox" data-task="perfis"><span>Organizar o YouTube e o
+                    TikTok com uma apresentação simples.<time data-task-date="perfis">Prazo a definir</time></span><span
+                    class="task-state" aria-hidden="true"></span></label></li>
+              <li><label class="roadmap-task"><input type="checkbox" data-task="roteiro"><span>Escrever o roteiro do
+                    primeiro vídeo.<time data-task-date="roteiro">Prazo a definir</time></span><span class="task-state"
+                    aria-hidden="true"></span></label></li>
+              <li><label class="roadmap-task"><input type="checkbox" data-task="video"><span>Gravar e publicar o
+                    primeiro vídeo longo.<time data-task-date="video">Prazo a definir</time></span><span
+                    class="task-state" aria-hidden="true"></span></label></li>
+              <li><label class="roadmap-task"><input type="checkbox" data-task="cortes"><span>Transformar a gravação em
+                    três vídeos curtos.<time data-task-date="cortes">Prazo a definir</time></span><span
+                    class="task-state" aria-hidden="true"></span></label></li>
+              <li><label class="roadmap-task"><input type="checkbox" data-task="publicar-curtos"><span>Publicar os
+                    curtos com convite para assistir ao vídeo completo.<time data-task-date="publicar-curtos">Prazo a
+                      definir</time></span><span class="task-state" aria-hidden="true"></span></label></li>
+              <li><label class="roadmap-task"><input type="checkbox" data-task="rotina"><span>Manter um vídeo longo e
+                    três curtos por semana até o prazo.<time data-task-date="rotina">Prazo a definir</time></span><span
+                    class="task-state" aria-hidden="true"></span></label></li>
+              <li><label class="roadmap-task"><input type="checkbox" data-task="revisao"><span>Revisar as dúvidas e os
+                    temas que despertaram interesse.<time data-task-date="revisao">Prazo a definir</time></span><span
+                    class="task-state" aria-hidden="true"></span></label></li>
+            </ul>
+            <details class="roadmap-details">
+              <summary>Sugestões para os primeiros vídeos <span aria-hidden="true">+</span></summary>
+              <div>
+                <ul>
+                  <li>Três erros que atrasam a expedição.</li>
+                  <li>Como organizar a passagem de turno.</li>
+                  <li>Quais indicadores um líder de logística deve acompanhar.</li>
+                  <li>Como identificar um gargalo na operação.</li>
+                  <li>Seu primeiro plano de melhoria em uma página.</li>
+                </ul>
+                <p><b>Convite para os vídeos curtos:</b> “No vídeo completo, mostro como aplicar isso na operação.
+                  Assista no canal.”</p>
+              </div>
+            </details>
+            <p class="roadmap-nudge">O primeiro vídeo precisa ser publicado, não perfeito.</p>
+          </article>
+          <article class="roadmap-phase" data-phase="comunidade" aria-labelledby="phase-comunidade">
+            <header>
+              <div>
+                <p class="eyebrow">02 / TURMA FUNDADORA</p>
+                <h3 id="phase-comunidade">Crie a comunidade no WhatsApp.</h3>
+              </div><span class="phase-progress" data-phase-progress="comunidade">0 / 6</span>
+            </header>
+            <p class="phase-description">Prepare a casa nos últimos dias da primeira fase e abra as inscrições na data
+              marcada. Comece com uma entrega que você consegue cumprir.</p>
+            <ul class="roadmap-tasks">
+              <li><label class="roadmap-task"><input type="checkbox" data-task="proposta"><span>Definir a proposta da
+                    turma fundadora e a mensalidade.<time data-task-date="proposta">Prazo a definir</time></span><span
+                    class="task-state" aria-hidden="true"></span></label></li>
+              <li><label class="roadmap-task"><input type="checkbox" data-task="grupo"><span>Criar o grupo no WhatsApp e
+                    combinar suas regras.<time data-task-date="grupo">Prazo a definir</time></span><span
+                    class="task-state" aria-hidden="true"></span></label></li>
+              <li><label class="roadmap-task"><input type="checkbox" data-task="cobranca"><span>Configurar a cobrança
+                    recorrente na InfinitePay.<time data-task-date="cobranca">Prazo a definir</time></span><span
+                    class="task-state" aria-hidden="true"></span></label></li>
+              <li><label class="roadmap-task"><input type="checkbox" data-task="teste-pagamento"><span>Testar o
+                    pagamento e a confirmação de entrada no grupo.<time data-task-date="teste-pagamento">Prazo a
+                      definir</time></span><span class="task-state" aria-hidden="true"></span></label></li>
+              <li><label class="roadmap-task"><input type="checkbox" data-task="entregaveis"><span>Planejar quatro
+                    pequenos entregáveis para os alunos.<time data-task-date="entregaveis">Prazo a
+                      definir</time></span><span class="task-state" aria-hidden="true"></span></label></li>
+              <li><label class="roadmap-task"><input type="checkbox" data-task="abrir-turma"><span>Abrir as inscrições e
+                    receber os primeiros membros pagantes.<time data-task-date="abrir-turma">Prazo a
+                      definir</time></span><span class="task-state" aria-hidden="true"></span></label></li>
+            </ul>
+            <details class="roadmap-details">
+              <summary>O que entregar e como cobrar <span aria-hidden="true">+</span></summary>
+              <div>
+                <p>Seu público trabalha durante a semana. Reserve um encontro aos sábados, disponibilize a gravação e
+                  compartilhe uma dica prática durante a semana.</p>
+                <ul>
+                  <li>Semana 1: aula de diagnóstico + checklist da operação.</li>
+                  <li>Semana 2: aula de indicadores + planilha simples.</li>
+                  <li>Semana 3: aula de processos + roteiro de melhoria.</li>
+                  <li>Semana 4: encontro para dúvidas + revisão dos planos.</li>
+                </ul>
+                <p>Na InfinitePay, crie a cobrança mensal, teste o link e acompanhe os pagamentos antes de liberar o
+                  acesso. Confira a modalidade disponível: lembrete de cobrança e débito automático são coisas
+                  diferentes.</p><a
+                  href="https://ajuda.infinitepay.io/pt-BR/articles/11950179-como-criar-cobrancas-recorrentes"
+                  target="_blank" rel="noopener noreferrer">Ver como configurar a cobrança na InfinitePay</a>
+              </div>
+            </details>
+            <p class="roadmap-nudge">Uma turma pequena bem atendida vale mais que um grupo grande abandonado.</p>
+          </article>
+          <article class="roadmap-phase" data-phase="desafio" aria-labelledby="phase-desafio">
+            <header>
+              <div>
+                <p class="eyebrow">03 / DESAFIO E PRIMEIRA OFERTA</p>
+                <h3 id="phase-desafio">Entregue valor. Convide para o próximo passo.</h3>
+              </div><span class="phase-progress" data-phase-progress="desafio">0 / 8</span>
+            </header>
+            <p class="phase-description">Um desafio gratuito de sete dias, com aulas curtas à noite e uma aplicação
+              prática por dia. No último encontro, apresente uma oferta de R$ 993 para quem quer avançar.</p>
+            <ul class="roadmap-tasks">
+              <li><label class="roadmap-task"><input type="checkbox" data-task="problema"><span>Escolher um problema
+                    específico para o desafio.<time data-task-date="problema">Prazo a definir</time></span><span
+                    class="task-state" aria-hidden="true"></span></label></li>
+              <li><label class="roadmap-task"><input type="checkbox" data-task="programa"><span>Definir as aulas e os
+                    materiais de apoio.<time data-task-date="programa">Prazo a definir</time></span><span
+                    class="task-state" aria-hidden="true"></span></label></li>
+              <li><label class="roadmap-task"><input type="checkbox" data-task="inscricao"><span>Criar a inscrição
+                    gratuita com compromisso de participação.<time data-task-date="inscricao">Prazo a
+                      definir</time></span><span class="task-state" aria-hidden="true"></span></label></li>
+              <li><label class="roadmap-task"><input type="checkbox" data-task="convite"><span>Divulgar o convite no
+                    canal e na comunidade.<time data-task-date="convite">Prazo a definir</time></span><span
+                    class="task-state" aria-hidden="true"></span></label></li>
+              <li><label class="roadmap-task"><input type="checkbox" data-task="confirmar"><span>Confirmar os
+                    participantes e explicar as regras.<time data-task-date="confirmar">Prazo a
+                      definir</time></span><span class="task-state" aria-hidden="true"></span></label></li>
+              <li><label class="roadmap-task"><input type="checkbox" data-task="conduzir"><span>Conduzir as sete aulas e
+                    acompanhar as tarefas.<time data-task-date="conduzir">Prazo a definir</time></span><span
+                    class="task-state" aria-hidden="true"></span></label></li>
+              <li><label class="roadmap-task"><input type="checkbox" data-task="ofertar"><span>Apresentar o produto de
+                    R$ 993 no último encontro.<time data-task-date="ofertar">Prazo a definir</time></span><span
+                    class="task-state" aria-hidden="true"></span></label></li>
+              <li><label class="roadmap-task"><input type="checkbox" data-task="avaliar"><span>Recolher avaliações e
+                    marcar o início da entrega vendida.<time data-task-date="avaliar">Prazo a definir</time></span><span
+                    class="task-state" aria-hidden="true"></span></label></li>
+            </ul>
+            <details class="roadmap-details">
+              <summary>O desafio, dia por dia <span aria-hidden="true">+</span></summary>
+              <div>
+                <p>A ideia dos pequenos desafios vem de um aprendizado que Bruno teve pessoalmente com Richmond Dihn:
+                  ajudar a pessoa a aplicar, perceber valor e então conhecer um próximo passo.</p>
+                <p><b>Combine antes de começar:</b> para continuar no acompanhamento ativo, cada participante entrega a
+                  tarefa até o próximo encontro. Quem não entregar deixa o acompanhamento do desafio; a regra precisa
+                  estar clara na inscrição.</p>
+                <ol class="challenge-days">
+                  <li><b>Escolher um gargalo.</b> Registrar a situação inicial.</li>
+                  <li><b>Mapear o processo.</b> Desenhar como o trabalho acontece.</li>
+                  <li><b>Levantar dados.</b> Identificar atrasos e desperdícios.</li>
+                  <li><b>Escolher uma melhoria.</b> Definir uma ação pequena e viável.</li>
+                  <li><b>Testar na prática.</b> Aplicar ou preparar um teste autorizado.</li>
+                  <li><b>Comparar e aprender.</b> Organizar observações e resultados.</li>
+                  <li><b>Apresentar o plano.</b> Compartilhar o aprendizado e conhecer a oferta.</li>
+                </ol>
+                <p>Use dados e imagens autorizados ou exemplos fictícios. Não peça fotos de áreas restritas, documentos
+                  ou informações confidenciais da empresa.</p>
+                <p>As aulas cabem em 30–45 minutos, à noite. O encerramento acontece no fim de semana; o calendário
+                  ajusta o início para manter sete dias consecutivos.</p>
+              </div>
+            </details>
+            <details class="roadmap-details">
+              <summary>A primeira oferta de R$ 993 <span aria-hidden="true">+</span></summary>
+              <div class="first-offer"><span class="eyebrow">PRÓXIMO PASSO DEPOIS DO DESAFIO</span>
+                <h4>Logística na Prática: da análise ao plano de melhoria</h4>
+                <p>Quatro encontros semanais, modelos de trabalho e orientação sobre um projeto aplicado à rotina do
+                  participante.</p><strong>R$ 993</strong>
+                <p>Apresente o programa, os limites do acompanhamento, a data de início e o que será entregue antes de
+                  receber o pagamento. O desafio já deve ter valor por si só; continuar é uma escolha.</p>
+                <p><b>Outros caminhos:</b> liderança operacional ou indicadores de logística, conforme as dúvidas que
+                  aparecerem no grupo.</p>
+              </div>
+            </details>
+            <p class="roadmap-nudge">Ensine algo útil hoje. Não espere criar o curso perfeito para fazer a primeira
+              oferta.</p>
+          </article>
+        </div>
+        <div class="roadmap-reset">
+          <p id="roadmap-storage-note">Seu progresso fica salvo neste navegador.</p><button id="roadmap-reset"
+            type="button">Recomeçar roteiro</button>
+          <div id="roadmap-reset-confirm" hidden>
+            <p>Apagar as marcações e voltar ao plano de 60 dias?</p><button id="roadmap-reset-yes" class="button"
+              type="button">Sim, recomeçar</button><button id="roadmap-reset-no" class="button" type="button">Manter meu
+              progresso</button>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="inspiration-section" aria-labelledby="inspiration-title">
+      <img class="inspiration-art" src="./brand/god.jpg" alt="" aria-hidden="true" draggable="false">
+      <div class="wrap inspiration-inner">
+        <div class="inspiration-copy">
+          <p class="eyebrow">CONSTRUA ANTES DE QUERER ESCALAR</p>
+          <h2 id="inspiration-title">Venda a ideia.<br>Valide a procura.<br><span>Produza com direção.</span></h2>
+          <p class="inspiration-lead">Apresente uma solução clara, combine a entrega e o prazo, conquiste os primeiros
+            clientes e use essa receita para financiar a produção. Vender antes de produzir é um caminho legítimo quando
+            o compromisso é claro e a entrega é cumprida.</p>
+          <p class="inspiration-lead">Não monte uma estrutura inteira antes de descobrir se alguém quer comprar.</p>
+        </div>
+        <div class="inspiration-principles">
+          <article><span>01 / COMECE PEQUENO</span>
+            <h3>Administre bem o pouco.</h3>
+            <p>Construa, consolide e só então amplie. Não tente escalar uma ideia que ainda não saiu do papel. Começar
+              sozinho, com uma entrega possível, já é começar.</p>
+          </article>
+          <article><span>02 / CAPITAL COM DIREÇÃO</span>
+            <h3>Financie a entrega com a procura.</h3>
+            <p>Capital de terceiros pode apoiar o crescimento quando o negócio tem caixa para pagar juros e parcelas.</p>
+            <p>Com uma boa capacidade de pagamento e garantias aceitas, como ativos e recebíveis, aliado ao valor estimado da empresa, negocie crédito para manter uma operação que já faz sentido. <strong>Não sustente uma ideia ainda sem procura e nem se desfaça de patrimonios que você possui, não venda imóveis nem veiculos para sustentar um negocio sem fundamentos e contratos de anos firmados</strong>.</p>
+          </article>
+          <article><span>03 / GENTE QUE MULTIPLICA</span>
+            <h3>Contrate com critério.<br>Escolha sócios com mais critério ainda.</h3>
+            <p>Quem soma à operação pode ser contratado. Quem multiplica o negócio ao seu lado pode merecer uma
+              participação minoritária, proporcional à contribuição e com responsabilidades claras.</p>
+            <p>Não distribua sociedade para resolver qualquer necessidade. Primeiro, construa algo que funcione, sozinho e com ajuda de IA.</p>
+          </article>
+        </div>
+        <div class="inspiration-closing">
+          <p>Empresa tem custos. No momento certo, contrate, remunere com justiça e multiplique oportunidades. Gere
+            empregos e mude vidas.</p><strong>Honre o que Deus colocou em suas mãos.<br>Seja forte e corajoso.</strong>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="footer">
+    <div class="wrap footer-inner"><a class="footer-brand logo-brand" href="#inicio"
+        aria-label="Edinaldo — Logística de Elite, início"><img src="brand/edinaldo-branco-transparente.svg" width="156"
+          height="31" alt="Edinaldo — Logística de Elite"></a>
+      <p class="footer-credit">Feito com <svg class="footer-heart" viewBox="0 0 24 24" width="16" height="16" role="img"
+          aria-label="amor">
+          <path fill="#1645ee" d="M12 21s-9-5.7-9-12a5 5 0 0 1 9-3 5 5 0 0 1 9 3c0 6.3-9 12-9 12Z" />
+        </svg> por Bruno Taletti.</p>
+    </div>
+  </footer>
+  <nav class="mobile-nav" aria-label="Navegação rápida no celular">
+    <a href="#simulador"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+        aria-hidden="true">
+        <path d="M4 7h16M4 17h16" />
+        <circle cx="9" cy="7" r="2.5" fill="var(--paper)" />
+        <circle cx="15" cy="17" r="2.5" fill="var(--paper)" />
+      </svg><span>Simular</span></a>
+    <a href="#funil"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+        <path d="M3 4h18l-7 9v6l-4 2v-8z" />
+      </svg><span>O funil</span></a>
+    <a href="#patrimonio"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+        aria-hidden="true">
+        <path d="M4 20V10h4v10m2 0V5h4v15m2 0V2h4v18M2 20h20" />
+      </svg><span>Patrimônio</span></a>
+    <a href="#projecoes"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+        aria-hidden="true">
+        <rect x="3" y="4" width="18" height="17" rx="1" />
+        <path d="M3 9h18M8 2v4m8-4v4M7 13h3m4 0h3M7 17h3m4 0h3" />
+      </svg><span>Projeções</span></a>
+  </nav>
+  <div id="export-status" class="sr-only" role="status" aria-live="polite"></div>
+</body>
+
+</html>

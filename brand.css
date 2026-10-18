@@ -1,0 +1,28 @@
+/* The outlined Roman SD master preserves the logo's spacing in every browser. */
+.brand.logo-brand,
+.footer-brand.logo-brand {
+  display: inline-flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: row;
+  gap: 0;
+  flex-shrink: 0;
+  min-height: 44px;
+  line-height: 1;
+  letter-spacing: 0;
+}
+.brand.logo-brand img { display: block; width: 180px; height: auto; }
+.footer-brand.logo-brand img { display: block; width: 156px; height: auto; }
+@media screen and (max-width: 760px), screen and (max-width: 1023px) and (pointer: coarse) {
+  .brand.logo-brand img { width: 144px; }
+  .footer-brand.logo-brand img { width: 160px; }
+}
+@media screen and (max-width: 359px) {
+  .brand.logo-brand img { width: 132px; }
+}
+@media print {
+  .brand.logo-brand { min-height: 34px; }
+  .brand.logo-brand img { width: 156px; }
+  .footer-brand.logo-brand { min-height: 28px; }
+  .footer-brand.logo-brand img { width: 132px; }
+}

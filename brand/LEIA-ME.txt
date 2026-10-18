@@ -1,0 +1,27 @@
+EDINALDO — LOGÍSTICA DE ELITE
+Identidade tipográfica
+
+Principal: branco sobre azul royal #1645EE.
+Positivo: azul royal sobre branco.
+Monocromático positivo: preto #151619 sobre branco.
+Monocromático negativo: branco sobre preto #151619.
+Há versões sem fundo em azul, branco e preto.
+
+O nome EDINALDO usa a fonte Roman SD (RomanSD), de Steve Deffeyes.
+A assinatura LOGÍSTICA DE ELITE usa Manrope, peso 500, com espaçamento
+ajustado para compartilhar os limites laterais do nome. A distância
+entre as linhas é fixa e proporcional ao conjunto.
+
+Os SVGs contêm desenhos vetoriais das letras; não dependem de fontes
+instaladas. Não esticar, comprimir, mudar o espaçamento das linhas ou
+acrescentar efeitos. Manter ao redor um espaço livre de pelo menos
+metade da altura da linha EDINALDO.
+
+Fontes e créditos:
+Roman SD — Steve Deffeyes: https://www.dafont.com/roman-sd.font
+Fonte original obtida em https://dl.dafont.com/dl/?f=roman_sd
+O arquivo original autoriza a criação de obras e gráficos. Nenhuma
+fonte Roman SD modificada é distribuída neste pacote, apenas o logotipo
+como obra gráfica. O arquivo de licença original está em RomanSD-licenca.txt.
+Manrope — licença SIL Open Font License, incluída em Manrope-OFL.txt
+e em https://github.com/google/fonts/tree/main/ofl/manrope
